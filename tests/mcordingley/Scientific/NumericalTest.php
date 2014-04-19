@@ -1,6 +1,6 @@
 <?php
 
-namespace mcordingley\math;
+namespace mcordingley\Scientific;
 
 class NumericalTest extends PHPUnit_Framework_TestCase {
 	public function test_erf() {
