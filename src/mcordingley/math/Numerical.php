@@ -1,8 +1,8 @@
 <?php
 
-namespace mcordingley\math;
+namespace mcordingley\Math;
 
-class SpecialFunctions {
+class Numerical {
     // Non-instantiable
     private function __construct() {}
 	
