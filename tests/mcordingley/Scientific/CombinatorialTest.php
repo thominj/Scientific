@@ -2,7 +2,7 @@
 
 namespace mcordingley\Scientific;
 
-class NumericalTest extends PHPUnit_Framework_TestCase {
+class CombinatorialTest extends \PHPUnit_Framework_TestCase {
     public function test_factorial() {
 		$this->assertEquals(1, Combinatorial::factorial(0));
 		$this->assertEquals(1, Combinatorial::factorial(1));
