@@ -1,6 +1,6 @@
 <?php
 
-namespace mcordingley\Math;
+namespace mcordingley\Scientific;
 
 class Numerical {
     // Non-instantiable
