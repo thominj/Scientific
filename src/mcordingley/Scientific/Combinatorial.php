@@ -67,7 +67,7 @@ class Combinatorial {
 	}
     
     /**
-     * @alias permutations
+     * @alias combinations
      */
     public static function nCr($n, $r) {
         return self::combinations($n, $r);
