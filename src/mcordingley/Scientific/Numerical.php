@@ -7,7 +7,7 @@ class Numerical {
     private function __construct() {}
 	
 	/**
-	 * Error Function
+	 * erf
 	 * 
 	 * Returns the real error function of a number.
 	 * An approximation from Abramowitz and Stegun is used.
@@ -28,7 +28,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Inverse Error Function
+	 * ierf
 	 * 
 	 * Returns the inverse real error function of a number.
 	 * More information can be found at
@@ -44,7 +44,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Gamma Function
+	 * gamma
 	 * 
 	 * Returns the gamma function of a number.
 	 * The gamma function is a generalization of the factorial function
@@ -85,7 +85,7 @@ class Numerical {
 	}
 
 	/**
-	 * Log Gamma Function
+	 * gammaln
 	 * 
 	 * Returns the natural logarithm of the gamma function.  Useful for
 	 * scaling.
@@ -111,7 +111,7 @@ class Numerical {
 	}
 
 	/**
-	 * Inverse gamma function
+	 * igamma
 	 * 
 	 * Returns the inverse of the gamma function.  The relative error of the
 	 * principal branch peaks at 1.5 near the lower bound (i.e. igamma(0.885603))
@@ -140,7 +140,7 @@ class Numerical {
 	}
 
 	/**
-	 * Digamma Function
+	 * digamma
 	 * 
 	 * Returns the digamma function of a number
 	 * 
@@ -182,7 +182,7 @@ class Numerical {
 	}
 
 	/**
-	 * Lambert Function
+	 * lambert
 	 * 
 	 * Returns the positive branch of the lambert function
 	 * 
@@ -228,7 +228,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Incomplete (Lower) Gamma Function
+	 * lowerGamma
 	 * 
 	 * Returns the lower gamma function of a number.
 	 * 
@@ -280,7 +280,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Inverse Incomplete (Lower) Gamma Function
+	 * ilowerGamma
 	 * 
 	 * Returns the inverse of the lower gamma function of a number.
 	 * 
@@ -308,7 +308,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Incomplete (Upper) Gamma Function
+	 * upperGamma
 	 * 
 	 * Returns the upper gamma function of a number.
 	 * 
@@ -322,7 +322,7 @@ class Numerical {
 	}
 
 	/**
-	 * Beta Function
+	 * beta
 	 * 
 	 * Returns the beta function of a pair of numbers.
 	 * 
@@ -336,7 +336,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Calculates the regularized incomplete beta function.
+	 * regularizedIncompleteBeta
 	 * 
 	 * Implements the jStat method of calculating the incomplete beta.
 	 * 
@@ -437,7 +437,7 @@ class Numerical {
 	}
 	
 	/**
-	 * Inverse Regularized Incomplete Beta Function
+	 * iregularizedIncompleteBeta
 	 *
 	 * The inverse of the regularized incomplete beta function.  
 	 *

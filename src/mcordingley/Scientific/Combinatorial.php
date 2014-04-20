@@ -7,7 +7,7 @@ class Combinatorial {
     private function __construct() {}
 
 	/**
-	 * Factorial Function
+	 * factorial
 	 * 
 	 * @param numeric $x 
 	 * @return numeric $x!
@@ -24,7 +24,7 @@ class Combinatorial {
 	}
 
 	/**
-	 * Permutation Function
+	 * permutations
 	 * 
 	 * Returns the number of ways of choosing $r objects from a collection
 	 * of $n objects, where the order of selection matters.
@@ -43,9 +43,16 @@ class Combinatorial {
         
 		return $total;
 	}
+    
+    /**
+     * @alias permutations
+     */
+    public static function nPr($n, $r) {
+        return self::permutations($n, $r);
+    }
 
 	/**
-	 * Combination Function
+	 * combinations
 	 * 
 	 * Returns the number of ways of choosing $r objects from a collection
 	 * of $n objects, where the order of selection does not matter.
@@ -58,4 +65,11 @@ class Combinatorial {
 	public static function combinations($n, $r) {
 		return self::permutations($n, $r)/self::factorial($r);
 	}
+    
+    /**
+     * @alias permutations
+     */
+    public static function nCr($n, $r) {
+        return self::combinations($n, $r);
+    }
 }

@@ -4,7 +4,7 @@ namespace mcordingley\Scientific;
 
 class Statistical {
 	/**
-	 * Sum Function
+	 * sum
 	 * 
 	 * Sums an array of numeric values.  Non-numeric values
 	 * are treated as zeroes.
@@ -26,7 +26,7 @@ class Statistical {
 	}
 
 	/**
-	 * Product Function
+	 * sumProduct
 	 * 
 	 * Multiplies an array of numeric values.  Non-numeric values
 	 * are treated as ones.
@@ -35,7 +35,7 @@ class Statistical {
 	 * @return float The product of the elements of the array
 	 * @static
 	 */
-	public static function product(array $data) {
+	public static function sumProduct(array $data) {
 		$product = 1;
         
 		foreach ($data as $element) {
@@ -48,7 +48,7 @@ class Statistical {
 	}
 
 	/**
-	 * Average Function
+	 * average
 	 * 
 	 * Takes the arithmetic mean of an array of numeric values.
 	 * Non-numeric values are treated as zeroes.
@@ -62,7 +62,7 @@ class Statistical {
 	}
 
 	/**
-	 * Geometric Average Function
+	 * gaverage
 	 * 
 	 * Takes the geometic mean of an array of numeric values.
 	 * Non-numeric values are treated as ones.
@@ -72,11 +72,11 @@ class Statistical {
 	 * @static
 	 */
 	public static function gaverage(array $data) {
-		return pow(self::product($data), 1 / count($data));
+		return pow(self::sumProduct($data), 1 / count($data));
 	}
 
 	/**
-	 * Sum-Squared Function
+	 * sumSquared
 	 * 
 	 * Returns the sum of squares of an array of numeric values.
 	 * Non-numeric values are treated as zeroes.
@@ -85,7 +85,7 @@ class Statistical {
 	 * @return float The arithmetic average of the elements of the array
 	 * @static
 	 */
-	public static function sumsquared(array $data) {
+	public static function sumSquared(array $data) {
 		$sum = 0;
         
 		foreach ($data as $element) {
@@ -99,7 +99,7 @@ class Statistical {
 
 
 	/**
-	 * Sum-XY Function
+	 * sumXY
 	 * 
 	 * Returns the sum of products of paired variables in a pair of arrays
 	 * of numeric values.  The two arrays must be of equal length.
@@ -138,7 +138,7 @@ class Statistical {
 	}
 
 	/**
-	 * Sum-Squared Error Function
+	 * sse
 	 * 
 	 * Returns the sum of squares of errors of an array of numeric values.
 	 * Non-numeric values are treated as zeroes.
@@ -164,7 +164,7 @@ class Statistical {
 	}
 
 	/**
-	 * Mean-Squared Error Function
+	 * mse
 	 * 
 	 * Returns the arithmetic mean of squares of errors of an array
 	 * of numeric values. Non-numeric values are treated as zeroes.
@@ -178,7 +178,7 @@ class Statistical {
 	}
 
 	/**
-	 * Covariance Function
+	 * covariance
 	 * 
 	 * Returns the covariance of two arrays.  The two arrays must
 	 * be of equal length. Non-numeric values are treated as zeroes.
@@ -193,7 +193,7 @@ class Statistical {
 	}
 
 	/**
-	 * Variance Function
+	 * variance
 	 * 
 	 * Returns the population variance of an array.
 	 * Non-numeric values are treated as zeroes.
@@ -207,7 +207,7 @@ class Statistical {
 	}
 
 	/**
-	 * Standard Deviation Function
+	 * stdDev
 	 * 
 	 * Returns the population standard deviation of an array.
 	 * Non-numeric values are treated as zeroes.
@@ -216,12 +216,12 @@ class Statistical {
 	 * @return float The population standard deviation of the supplied array
 	 * @static
 	 */
-	public static function stddev(array $data) {
+	public static function stdDev(array $data) {
 		return sqrt(self::variance($data));
 	}
 
 	/**
-	 * Sample Standard Deviation Function
+	 * sampleStdDev
 	 * 
 	 * Returns the sample (unbiased) standard deviation of an array.
 	 * Non-numeric values are treated as zeroes.
@@ -230,12 +230,12 @@ class Statistical {
 	 * @return float The unbiased standard deviation of the supplied array
 	 * @static
 	 */
-	public static function sampleStddev(array $data) {
+	public static function sampleStdDev(array $data) {
 		return sqrt(self::sse($data) / (count($data) - 1));
 	}
 
 	/**
-	 * Correlation Function
+	 * correlation
 	 * 
 	 * Returns the correlation of two arrays.  The two arrays must
 	 * be of equal length. Non-numeric values are treated as zeroes.
@@ -246,6 +246,6 @@ class Statistical {
 	 * @static
 	 */
 	public static function correlation($datax, $datay) {
-		return self::covariance($datax, $datay) / (self::stddev($datax) * self::stddev($datay));
+		return self::covariance($datax, $datay) / (self::stdDev($datax) * self::stdDev($datay));
 	}
 }

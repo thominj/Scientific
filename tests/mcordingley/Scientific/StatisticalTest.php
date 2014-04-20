@@ -19,10 +19,10 @@ class StatisticalTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals(241.8, Statistical::sum($this->dataz));
 	}
 
-	public function test_product() {
-		$this->assertEquals(120, Statistical::product($this->datax));
-		$this->assertEquals(240240, Statistical::product($this->datay));
-		$this->assertEquals(159339674.88, Statistical::product($this->dataz));
+	public function test_sumProduct() {
+		$this->assertEquals(120, Statistical::sumProduct($this->datax));
+		$this->assertEquals(240240, Statistical::sumProduct($this->datay));
+		$this->assertEquals(159339674.88, Statistical::sumProduct($this->dataz));
 	}
 
 	public function test_average() {
@@ -37,10 +37,10 @@ class StatisticalTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals(43.698324495373498, Statistical::gaverage($this->dataz));
 	}
 
-	public function test_sumsquared() {
-		$this->assertEquals(55, Statistical::sumsquared($this->datax));
-		$this->assertEquals(730, Statistical::sumsquared($this->datay));
-		$this->assertEquals(14323.86, Statistical::sumsquared($this->dataz));
+	public function test_sumSquared() {
+		$this->assertEquals(55, Statistical::sumSquared($this->datax));
+		$this->assertEquals(730, Statistical::sumSquared($this->datay));
+		$this->assertEquals(14323.86, Statistical::sumSquared($this->dataz));
 	}
 
 	public function test_sumXY() {
@@ -71,16 +71,16 @@ class StatisticalTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals(526.0824, Statistical::variance($this->dataz));
 	}
 
-	public function test_stddev() {
-		$this->assertEquals(1.4142135623730951, Statistical::stddev($this->datax));
-		$this->assertEquals(1.4142135623730951, Statistical::stddev($this->datay));
-		$this->assertEquals(22.936486217378629, Statistical::stddev($this->dataz));
+	public function test_stdDev() {
+		$this->assertEquals(1.4142135623730951, Statistical::stdDev($this->datax));
+		$this->assertEquals(1.4142135623730951, Statistical::stdDev($this->datay));
+		$this->assertEquals(22.936486217378629, Statistical::stdDev($this->dataz));
 	}
 
-	public function test_sampleStddev() {
-		$this->assertEquals(1.5811388300841898, Statistical::sampleStddev($this->datax));
-		$this->assertEquals(1.5811388300841898, Statistical::sampleStddev($this->datay));
-		$this->assertEquals(25.643771173522818, Statistical::sampleStddev($this->dataz));
+	public function test_sampleStdDev() {
+		$this->assertEquals(1.5811388300841898, Statistical::sampleStdDev($this->datax));
+		$this->assertEquals(1.5811388300841898, Statistical::sampleStdDev($this->datay));
+		$this->assertEquals(25.643771173522818, Statistical::sampleStdDev($this->dataz));
 	}
 
 	public function test_correlation() {
