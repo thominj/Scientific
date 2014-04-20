@@ -1,1 +1,4 @@
-Part of the PHPStats project rewrite. This code is currently under heavy development. Please do not use.
+Scientific
+==========
+
+Mathematical functions for PHP that relate to science and statistics
