@@ -15,8 +15,9 @@ class Combinatorial {
      */
     public static function factorial($x) {
         $sum = 1;
+        $max = floor($x);
         
-        for ($i = 1; $i <= floor($x); $i++) {
+        for ($i = 1; $i <= $max; $i++) {
             $sum *= $i;
         }
         
